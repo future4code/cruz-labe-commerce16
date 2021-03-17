@@ -3,6 +3,7 @@ import './App.css';
 import styled from 'styled-components';
 import Home from './components/Home/Home'
 import Filter from './components/Filtro/Filter'
+import Carrinho from './components/Carrinho/Carrinho'
 
 
 const AppContainer = styled.div`
@@ -10,7 +11,7 @@ const AppContainer = styled.div`
   grid-template-columns: 1fr 3fr 1fr;
   padding: 16px;
   gap: 8px;
-`;
+`
 
 /*testando*/
 
@@ -19,7 +20,7 @@ function App() {
     <AppContainer>
       <Home />
       <Filter />
-      <div className="teste">teste3</div>
+      <Carrinho/>
     </AppContainer>
   );
 }
