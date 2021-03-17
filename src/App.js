@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
-import Filtro from './components/Filtro/Filtro'
+import Filter from './components/Filtro/Filter'
 
 const AppContainer = styled.div`
   display: grid;
@@ -15,7 +15,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Filtro />
+      <Filter />
       <div className="teste">teste2</div>
       <div className="teste">teste3</div>
     </AppContainer>

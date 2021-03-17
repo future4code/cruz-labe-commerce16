@@ -17,7 +17,7 @@ const DivLabel = styled.label`
     margin-bottom:50px;
 `;
 
-export default class Filtro extends React.Component {
+export default class Filter extends React.Component {
     render() {
         return (
             <div>
