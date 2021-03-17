@@ -10,6 +10,7 @@ const AppContainer = styled.div`
   grid-template-columns: 1fr 3fr 1fr;
   padding: 16px;
   gap: 8px;
+  background-color: #EFE9E5;
 `;
 
 /*testando*/
@@ -17,8 +18,8 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Home />
       <Filter />
+      <Home />
       <div className="teste">teste3</div>
     </AppContainer>
   );
