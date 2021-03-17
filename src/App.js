@@ -1,14 +1,23 @@
 import React from 'react';
 import './App.css';
-import Filtro from './components/Filtro/Filtro'
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 16px;
+  gap: 8px;
+`;
+
 /*testando*/
+
 function App() {
   return (
-    <div className="App">
-      <Filtro />
+    <AppContainer>
+      <div className="teste">teste1</div>
       <div className="teste">teste2</div>
       <div className="teste">teste3</div>
-    </div>
+    </AppContainer>
   );
 }
 
