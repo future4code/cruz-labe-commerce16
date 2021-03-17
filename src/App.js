@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+import Home from './components/Home/Home'
 
 const AppContainer = styled.div`
   display: grid;
@@ -14,7 +15,7 @@ function App() {
   return (
     <AppContainer>
       <div className="teste">teste1</div>
-      <div className="teste">teste2</div>
+      <Home />
       <div className="teste">teste3</div>
     </AppContainer>
   );
