@@ -8,7 +8,7 @@ const Cart = styled.div `
     padding-top: 2vh;
     align-items: center;
     justify-content: flex-start;
-    height: 60vh;
+    height: 63.7vh;
     flex-direction: column;
 `
 const TituloCarrinho = styled.h3 `
