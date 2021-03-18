@@ -72,6 +72,24 @@ export default class CardsHome extends React.Component {
                         <Cost><b>R$ 200,00</b></Cost>
                         <AppToCard>Adicionar ao Carrinho</AppToCard>
                     </MidiaBox>
+                    <MidiaBox>
+                        <img src="https://picsum.photos/93/93" width="200" height="250" alt="" />
+                        <Title>Produto 6</Title>
+                        <Cost><b>R$ 200,00</b></Cost>
+                        <AppToCard>Adicionar ao Carrinho</AppToCard>
+                    </MidiaBox>
+                    <MidiaBox>
+                        <img src="https://picsum.photos/94/94" width="200" height="250" alt="" />
+                        <Title>Produto 7</Title>
+                        <Cost><b>R$ 200,00</b></Cost>
+                        <AppToCard>Adicionar ao Carrinho</AppToCard>
+                    </MidiaBox>
+                    <MidiaBox>
+                        <img src="https://picsum.photos/91/91" width="200" height="250" alt="" />
+                        <Title>Produto 8</Title>
+                        <Cost><b>R$ 200,00</b></Cost>
+                        <AppToCard>Adicionar ao Carrinho</AppToCard>
+                    </MidiaBox>
                 </Container>
             </div>
         );
