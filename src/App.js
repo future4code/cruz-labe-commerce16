@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
-import Home from './components/Home/Home'
-import Filter from './components/Filtro/Filter'
-import Carrinho from './components/Carrinho/Carrinho'
+import Home from './components/Home/Home';
+import Filter from './components/Filtro/Filter';
+import Carrinho from './components/Carrinho/Carrinho';
+import CardsHome from './components/Home/CardsHome';
 
 
 const AppContainer = styled.div`
@@ -13,6 +14,7 @@ const AppContainer = styled.div`
   background-color: #EFE9E5;
   margin: 0;
 `
+
 
 export default class App extends React.Component {
   state = {
@@ -43,6 +45,5 @@ export default class App extends React.Component {
       </AppContainer>
     );
   }
-}
 
 
