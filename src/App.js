@@ -9,22 +9,19 @@ import Carrinho from './components/Carrinho/Carrinho'
 const AppContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  padding: 16px;
-  gap: 8px;
+  padding: 15px;
+  background-color: #EFE9E5;
+  margin: 0;
 `
 
-/*testando*/
-
-function App() {
+const App = () => {
   return (
     <AppContainer>
-      <Home />
       <Filter />
+      <Home />
       <Carrinho/>
     </AppContainer>
   );
 }
 
 export default App;
-
-//teste
