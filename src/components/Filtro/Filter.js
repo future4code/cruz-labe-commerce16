@@ -35,26 +35,7 @@ const ButtomSearch = styled.button`
     border-radius: 10px;
     font-size:20px;
 `
-    /*
-    Funcao do filtro
-    filtro = () =>{
-    const arrayCopia = [...array]
     
-     let arrayCop = arrayCopia.filter((filtrado) =>{
-        if(filtrado.preco >= 0 && filtrado.preco <= 20 ){
-            return true
-        }
-        return false
-    })
-    return arrayCop
-}
-
-   isKeyEnter = (event) =>{
-        if(event.key ==='Enter'){
-            realiza funcao de renderizar os produtos
-        }
-    }
-    */
 export default class Filter extends React.Component {
     render() {
         return (
