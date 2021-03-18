@@ -15,15 +15,35 @@ const AppContainer = styled.div`
   margin: 0;
 `
 
-const App = () => {
-  return (
-    <AppContainer>
-      <Filter />
-      <Home />
-      <Carrinho/>
-    </AppContainer>
-    
-  );
-}
 
-export default App;
+export default class App extends React.Component {
+  state = {
+    valueMax: 0,
+    valueMin: 0,
+    name: ""
+  }
+
+  onChangeValueMax = (event) => {
+    this.setState({ valueMax: event.target.value });
+  }
+
+  onChangeValueMin = (event) => {
+    this.setState({ valueMin: event.target.value })
+  }
+
+  onChangeName = (event) => {
+    this.setState({ name: event.target.value })
+  }
+
+
+  render() {
+    return (
+      <AppContainer>
+        <Filter />
+        <Home />
+        <Carrinho />
+      </AppContainer>
+    );
+  }
+
+
