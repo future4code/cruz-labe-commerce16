@@ -41,7 +41,7 @@ export default class Carrinho extends React.Component {
                 <Product>
                     <Quantity> 0x</Quantity>
                     <ProductName>yyyyyyyyyyyyy</ProductName>
-                    <Remove>Remover</Remove>
+                    <Remove>X</Remove>
                 </Product>
                 <TotalValue>R$ 000,000 </TotalValue>
             </Cart>
