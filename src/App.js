@@ -11,10 +11,11 @@ const AppContainer = styled.div`
   grid-template-columns: 1fr 3fr 1fr;
   padding: 16px;
   gap: 8px;
-
   background-color: #EFE9E5;
+  margin: 0;
+`
 
-function App() {
+const App = () => {
   return (
     <AppContainer>
       <Filter />

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Cart = styled.div `
-    border: 1px solid black;
+    border: 1px solid DodgerBlue;
     display: flex;
     align-content: space-between;
     padding-top: 2vh;
@@ -10,9 +10,13 @@ const Cart = styled.div `
     justify-content: flex-start;
     height: 63.7vh;
     flex-direction: column;
+    border-radius: 10px;
+
 `
 const TituloCarrinho = styled.h3 `
     text-align:center;
+    color: DodgerBlue;
+    margin-top: 28px;
 `
 const Product = styled.div `
     display: flex;
@@ -28,6 +32,9 @@ const ProductName = styled.p `
 const Remove = styled.button `
     height:25px;
     margin-top:2.5vh;
+    color: white;
+    border-radius: 10px;
+    background-color: DodgerBlue;
 `
 const TotalValue = styled.div `
     margin-top: 5vh;

@@ -51,7 +51,7 @@ export default class Home extends React.Component {
         return( 
             <div>
                 <HomeContainer>
-                    <ProductQuantity>Quantidade de produtos: Array</ProductQuantity>
+                    <ProductQuantity>Quantidade de produtos: 8</ProductQuantity>
                     <InputContainer>    
                         <LabelWhite>Ordenação: </LabelWhite>
                         <SelectContainer  value="" onChange="" >
