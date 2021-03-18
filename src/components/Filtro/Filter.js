@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
 const Border = styled.div`
     border: 1px solid DodgerBlue;
     display:flex;
@@ -35,11 +37,11 @@ export default class Filter extends React.Component {
                     <Title>Filtros de produtos</Title>
                     <DivLabel>
                         Valor Minimo
-                        <InputContainer type="number" value=""></InputContainer>
+                        <InputContainer type="number" value={this.valueMin}></InputContainer>
                     </DivLabel>
                     <DivLabel>
                         Valor Máximo
-                        <InputContainer type="number" value=""></InputContainer>
+                        <InputContainer type="number" value={this.va}></InputContainer>
                     </DivLabel>
                     <DivLabel>
                         Buscar por Nome
