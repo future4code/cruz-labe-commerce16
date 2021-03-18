@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import CardsHome from './CardsHome'
-// import CardsHome from './CardsHome'
 
 const HomeContainer = styled.div`
     display: flex;
@@ -14,6 +13,14 @@ const HomeContainer = styled.div`
     margin-left: 20px;
     border-radius: 10px;
 `
+const Container = styled.section`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, 50%);
+    padding: 100px 20px;
+`
+
 const InputContainer = styled.div`    
     margin-right: 20px;
     
@@ -45,6 +52,7 @@ const LabelWhite = styled.label`
 export default class Home extends React.Component {
     state = {
         quantity: []
+        
     };
     
     render(){
@@ -60,10 +68,41 @@ export default class Home extends React.Component {
                         </SelectContainer>
                     </InputContainer>
                 </HomeContainer>
-                <CardsHome />
+                <Container>
+                    <CardsHome 
+                    image={"https://picsum.photos/90/90"}
+                    title={"Produto 1"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/97/97"}
+                    title={"Produto 2"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/96/96"}
+                    title={"Produto 3"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/95/95"}
+                    title={"Produto 4"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/94/94"}
+                    title={"Produto 5"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/93/93"}
+                    title={"Produto 6"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/92/92"}
+                    title={"Produto 7"}
+                    />
+                    <CardsHome 
+                    image={"https://picsum.photos/91/91"}
+                    title={"Produto 8"}
+                    />
+                </Container>
             </div>
-
-
         );
     }
 }
