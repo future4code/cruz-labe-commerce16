@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const MidiaBox = styled.div `
     display: flex;
     flex-direction: column;
@@ -35,7 +36,6 @@ const Cost = styled.div`
     text-align: center;
     
 `
-
 
 export default class CardsHome extends React.Component {
     render(){

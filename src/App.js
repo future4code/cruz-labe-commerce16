@@ -19,7 +19,7 @@ export default class App extends React.Component {
     valueMax: 0,
     valueMin: 0,
     name: ""
-  }
+  } 
 
   onChangeValueMax = (event) => {
     this.setState({ valueMax: event.target.value });
@@ -37,7 +37,14 @@ export default class App extends React.Component {
   render() {
     return (
       <AppContainer>
-        <Filter />
+        <Filter 
+          valueMax = {this.state.valueMax}
+          valueMin = {this.state.valueMin}
+          name = {this.state.name}
+          onChangeValueMax = {this.onChangeValueMax}
+          onChangeValueMin = {this.onChangeValueMin}
+          onChangeName = {this.onChangeName}          
+        />
         <Home />
         <Carrinho />
       </AppContainer>
