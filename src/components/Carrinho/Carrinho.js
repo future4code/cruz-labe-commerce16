@@ -11,6 +11,7 @@ const Cart = styled.div `
     height: 63.7vh;
     flex-direction: column;
     border-radius: 10px;
+    color: dodgerblue;
 
 `
 const TituloCarrinho = styled.h3 `
@@ -22,22 +23,31 @@ const Product = styled.div `
     display: flex;
     margin-top: 5vh;
     align-content: space-between;
+    color: dodgerblue;
 `
 const Quantity = styled.p `
     padding-right: 10px;
+    color: dodgerblue;
 `
 const ProductName = styled.p `
     padding-right: 10px;
+    color: dodgerblue;
 `
 const Remove = styled.button `
-    height:25px;
+    height:30px;
     margin-top:2.5vh;
-    color: white;
-    border-radius: 10px;
+    border-radius:6px;
     background-color: DodgerBlue;
+    font-weight: 450;
+    line-height: 1.3;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-top:2.5vh;
+    font-size: 1.0em;
+    color:white;
 `
 const TotalValue = styled.div `
     margin-top: 5vh;
+    color: dodgerblue;
 `
 
 export default class Carrinho extends React.Component {
