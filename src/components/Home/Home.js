@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CardsHome from './CardsHome'
+import {CardsHome} from './CardsHome'
 
 const HomeContainer = styled.div`
     display: flex;
@@ -20,17 +20,14 @@ const Container = styled.section`
     grid-auto-rows: minmax(200px, 50%);
     padding: 100px 20px;
 `
-
 const InputContainer = styled.div`    
     margin-right: 20px;
     
 `
-
 const ProductQuantity = styled.p`   
     margin-left: 20px;
     color: white;
 `
-
 const SelectContainer = styled.select`
   background-color: DodgerBlue;
   color: white;
@@ -38,72 +35,57 @@ const SelectContainer = styled.select`
   border: 1px solid white;
   border-radius: 10px;
 `
-
 const OptionContainer = styled.option`
   background-color: rgba(0, 0, 0, 0.1);
   color: white;
 `
-
 const LabelWhite = styled.label`
     color: white;
-
 `
 
-export default class Home extends React.Component {
+export class Home extends React.Component {
     state = {
-        quantity: []
-        
+        sort: "decrescente"
+
     };
+
+    getFilteredAndOrderedList = () => {
+        return this.props.products
+            .filter((product) => this.props.maxFilter ? product.cost < this.props.maxFilter : true)
+            .filter((product) => this.props.minFilter ? product.cost > this.props.minFilter : true)
+            .filter((product) => this.props.titleFilter ? product.title.includes(this.props.titleFilter) : true)
+            .sort((a, b) => this.state.sort === "crescente" ? a.cost - b.cost : b.cost - a.cost)
+    }
+
+    onChangeSort = (event) => {
+        this.setState({sort: event.target.value});
+    }
     
     render(){
+        const filteredAndOrderedList = this.getFilteredAndOrderedList()
         return( 
             <div>
                 <HomeContainer>
-                    <ProductQuantity>Quantidade de produtos: 8</ProductQuantity>
+                    <ProductQuantity>Quantidade de produtos: {filteredAndOrderedList.length}</ProductQuantity>
                     <InputContainer>    
-                        <LabelWhite>Ordenação: </LabelWhite>
-                        <SelectContainer  value="" onChange="">
-                            <OptionContainer value="crescente">Crescente</OptionContainer>
-                            <OptionContainer value="decrescente">Decrescente</OptionContainer>
-                        </SelectContainer>
+                        <LabelWhite>
+                            Ordenação:  
+                            <SelectContainer value={this.state.sort} onChange={this.onChangeSort}>
+                                <OptionContainer value="crescente">Crescente</OptionContainer>
+                                <OptionContainer value="decrescente">Decrescente</OptionContainer>
+                            </SelectContainer>
+                        </LabelWhite>
                     </InputContainer>
                 </HomeContainer>
+
                 <Container>
-                    <CardsHome 
-                    image={"https://picsum.photos/90/90"}
-                    title={"Produto 1"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/97/97"}
-                    title={"Produto 2"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/96/96"}
-                    title={"Produto 3"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/95/95"}
-                    title={"Produto 4"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/94/94"}
-                    title={"Produto 5"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/93/93"}
-                    title={"Produto 6"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/92/92"}
-                    title={"Produto 7"}
-                    />
-                    <CardsHome 
-                    image={"https://picsum.photos/91/91"}
-                    title={"Produto 8"}
-                    />
+                    {filteredAndOrderedList.map((product)=> {
+                        return <CardsHome
+                        product={product}
+                       />
+                    })}
                 </Container>
             </div>
         );
     }
 }
-
