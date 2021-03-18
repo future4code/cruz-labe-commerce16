@@ -16,7 +16,7 @@ const HomeContainer = styled.div`
 `
 const InputContainer = styled.div`    
     margin-right: 20px;
-
+    
 `
 
 const ProductQuantity = styled.p`   
@@ -25,16 +25,16 @@ const ProductQuantity = styled.p`
 `
 
 const SelectContainer = styled.select`
-  border: 6px solid white;
   background-color: DodgerBlue;
-  color: #ffffff;
-  padding: 8px 16px;
+  color: white;
+  padding: 6px 10px;
   border: 1px solid white;
   border-radius: 10px;
 `
 
 const OptionContainer = styled.option`
   background-color: rgba(0, 0, 0, 0.1);
+  color: white;
 `
 
 const LabelWhite = styled.label`
@@ -54,7 +54,7 @@ export default class Home extends React.Component {
                     <ProductQuantity>Quantidade de produtos: 8</ProductQuantity>
                     <InputContainer>    
                         <LabelWhite>Ordenação: </LabelWhite>
-                        <SelectContainer  value="" onChange="" >
+                        <SelectContainer  value="" onChange="">
                             <OptionContainer value="crescente">Crescente</OptionContainer>
                             <OptionContainer value="decrescente">Decrescente</OptionContainer>
                         </SelectContainer>
