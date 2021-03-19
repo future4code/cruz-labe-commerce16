@@ -56,11 +56,11 @@ export default class Carrinho extends React.Component {
             <Cart>
                 <TituloCarrinho>Carrinho</TituloCarrinho>
                 <Product>
-                    <Quantity> 0x</Quantity>
-                    <ProductName>yyyyyyyyyyyyy</ProductName>
-                    <Remove>X</Remove>
+                    <Quantity>{this.props.products.quantity}</Quantity>
+                    <ProductName>{this.props.products.title}</ProductName>
+                    <Remove onClick={()=>this.props.onRemoveProductFromCart}>X</Remove>
                 </Product>
-                <TotalValue>R$ 000,000 </TotalValue>
+                <TotalValue>R$ {this.props.totalValue} </TotalValue>
             </Cart>
         );
     }
