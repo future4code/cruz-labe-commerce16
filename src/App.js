@@ -4,12 +4,19 @@ import styled from 'styled-components';
 import {Home} from './components/Home/Home';
 import Filter from './components/Filtro/Filter';
 import Carrinho from './components/Carrinho/Carrinho';
+import imagem1 from './imagem/planetOne.png';
+import imagem2 from './imagem/2.png';
+import imagem3 from './imagem/3.png';
+import imagem4 from './imagem/4.png';
+import imagem5 from './imagem/5.png';
+import imagem6 from './imagem/6.png';
+import imagem7 from './imagem/7.png';
+import imagem8 from './imagem/8.png';
 
 const AppContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   padding: 15px;
-  background-color: #EFE9E5;
   margin: 0;
 `
 const products = [
@@ -17,58 +24,58 @@ const products = [
     id: 1,
     title: 'Produto1',
     cost: 123,
-    image: 'https://picsum.photos/200/200?a=2'
+    image: imagem1,
   },
   {
     id: 2,
     title: 'Produto2',
     cost: 200,
-    image: 'https://picsum.photos/200/200?a=2'
+    image: imagem2
   },
   {
     id: 3,
     title: 'Produto3',
     cost: 250,
-    image: 'https://picsum.photos/200/200?a=3'
+    image: imagem3
   },
   {
     id: 4,
     title: 'Produto4',
     cost: 400,
-    image: 'https://picsum.photos/200/200?a=4'
+    image: imagem4
   },
   {
     id: 5,
     title: 'Produto5',
     cost: 300,
-    image: 'https://picsum.photos/200/200?a=5'
+    image: imagem5
   },
   {
     id: 6,
     title: 'Produto6',
     cost: 350,
-    image: 'https://picsum.photos/200/200?a=6'
+    image: imagem6
   },
   {
     id: 7,
     title: 'Produto7',
     cost: 450,
-    image: 'https://picsum.photos/200/200?a=7'
+    image: imagem7
   },
   {
     id: 8,
     title: 'Produto8',
     cost: 500,
-    image: 'https://picsum.photos/200/200?a=8'
+    image: imagem8
   }
 ]
 
 export default class App extends React.Component {
 
   state = {
-    minFilter: 100,
-    maxFilter: 1000,
-    nameFilter: 'Produto',
+    minFilter: '',
+    maxFilter: '',
+    nameFilter: '',
     productsInCart: [
       {
         id: 1,
@@ -100,7 +107,7 @@ export default class App extends React.Component {
     this.setState({nameFilter: event.target.value})
   }
 
-  onAddProductTCart = (productId) => {
+  onAddProductToCart = (productId) => {
     const productInCart = this.state.productsInCart.find(product => productId === product.id)
 
     if(productInCart){
@@ -116,7 +123,7 @@ export default class App extends React.Component {
       this.setState({productsInCart: newProductsInCart})
     } else {
       const productToAdd = products.find(product => productId === product.id)
-      const newProductsInCart = [...this.state.productsInCart, {...productToAdd, quantity: 0}]
+      const newProductsInCart = [...this.state.productsInCart, {...productToAdd, quantity: 1}]
 
       this.setState({productsInCart: newProductsInCart})
     }
@@ -151,7 +158,8 @@ export default class App extends React.Component {
           products={products}
           minFilter={this.state.minFilter}
           maxFilter={this.state.maxFilter}
-          nameFilter={this.state.nameFilter}/>
+          nameFilter={this.state.nameFilter}
+          onAddProductToCart={this.onAddProductToCart}/>
         <Carrinho />
       </AppContainer>
     );

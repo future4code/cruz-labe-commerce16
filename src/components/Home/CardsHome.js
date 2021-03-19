@@ -38,10 +38,10 @@ export class CardsHome extends React.Component {
         const product = this.props.product
         return <ContainerDiv>
                 <MediaBox>
-                    <ImgContainer src={product.image}/>
+                    <ImgContainer src={product.image} alt={product.title} width="170" height="200"/>
                     <Title><b><i>{product.title}</i></b></Title>
                     <Cost><b>R${product.cost},00</b></Cost>
-                    <AppToCard>
+                    <AppToCard onClick={() => this.props.onAddProductToCart(product.id)}>
                         Adicionar ao carrinho
                     </AppToCard>
                 </MediaBox>
