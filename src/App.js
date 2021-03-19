@@ -68,7 +68,7 @@ export default class App extends React.Component {
   state = {
     minFilter: 100,
     maxFilter: 1000,
-    titleFilter: 'Produto',
+    nameFilter: 'Produto',
     productsInCart: [
       {
         id: 1,
@@ -97,7 +97,7 @@ export default class App extends React.Component {
   }
 
   onChangeTitleFilter = (event) => {
-    this.setState({titleFilter: event.target.value})
+    this.setState({nameFilter: event.target.value})
   }
 
   onAddProductTCart = (productId) => {
@@ -139,14 +139,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppContainer>
+      <AppContainer>        
         <Filter 
-         valueMax = {this.state.valueMax}
-         valueMin = {this.state.valueMin}
-         name = {this.state.name}
-         onChangeValueMax = {this.onChangeValueMax}
-         onChangeValueMin = {this.onChangeValueMin}
-         onChangeName = {this.onChangeName}      
+         maxFilter = {this.state.maxFilter}
+         minFilter = {this.state.minFilter}
+         nameFilter = {this.state.nameFilter}
+         onChangeMaxFilter = {this.onChangeMaxFilter}
+         onChangeMinFilter = {this.onChangeMinFilter}
+         onChangeTitleFilter = {this.onChangeTitleFilter}      
         />
         <Home    
           products={products}

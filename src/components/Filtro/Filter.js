@@ -27,14 +27,6 @@ const InputContainer = styled.input`
     border-radius: 10px;
     border: 2px solid DodgerBlue;
 `
-const ButtomSearch = styled.button`
-    align-self: center;
-    background-color: DodgerBlue;
-    border-color: transparent transparent #fff transparent;
-    color: white;
-    border-radius: 10px;
-    font-size:20px;
-`
     
 export default class Filter extends React.Component {
     render() {
@@ -47,9 +39,8 @@ export default class Filter extends React.Component {
                         <InputContainer 
                             type="number" 
                             min="0"
-                            value={this.props.valueMin}
-                            onChange={this.props.onChangeValueMin}
-                            placeholder="valor min"
+                            value={this.props.minFilter}
+                            onChange={this.props.onChangeMinFilter}
                             >                                
                             </InputContainer>
                     </DivLabel>
@@ -58,22 +49,19 @@ export default class Filter extends React.Component {
                         <InputContainer 
                             type="number"
                             min="0"
-                            value={this.props.valueMax}
-                            onChange={this.props.onChangeValueMax}                            
+                            value={this.props.maxFilter}
+                            onChange={this.props.onChangeMaxFilter}                            
                             ></InputContainer>
                     </DivLabel>
                     <DivLabel>
                         Buscar por Nome
                         <InputContainer 
                              type="text"
-                             value={this.props.name}
-                             onChange={this.props.onChangeName}
-                             placeholder="Nome produto"
-                            //  onKeyUp={this.isKeyEnter}
+                             value={this.props.nameFilter}
+                             onChange={this.props.onChangeTitleFilter}                                               
                              ></InputContainer>
-                    </DivLabel>
-                    <ButtomSearch>Search</ButtomSearch>                   
-                </Border>
+                    </DivLabel>                                        
+                </Border>                
             </div>
         );
     }

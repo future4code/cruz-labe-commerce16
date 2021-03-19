@@ -51,9 +51,9 @@ export class Home extends React.Component {
 
     getFilteredAndOrderedList = () => {
         return this.props.products
-            .filter((product) => this.props.maxFilter ? product.cost < this.props.maxFilter : true)
+            .filter((product) =>  this.props.maxFilter? product.cost < this.props.maxFilter : true)
             .filter((product) => this.props.minFilter ? product.cost > this.props.minFilter : true)
-            .filter((product) => this.props.titleFilter ? product.title.includes(this.props.titleFilter) : true)
+            .filter((product) => this.props.nameFilter ? product.title.includes(this.props.nameFilter) : true)
             .sort((a, b) => this.state.sort === "crescente" ? a.cost - b.cost : b.cost - a.cost)
     }
 
@@ -65,6 +65,7 @@ export class Home extends React.Component {
         const filteredAndOrderedList = this.getFilteredAndOrderedList()
         return( 
             <div>
+                
                 <HomeContainer>
                     <ProductQuantity>Quantidade de produtos: {filteredAndOrderedList.length}</ProductQuantity>
                     <InputContainer>    
