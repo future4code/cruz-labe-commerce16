@@ -26,6 +26,13 @@ const Title = styled.h3`
 const InputContainer = styled.input`
     border-radius: 10px;
     border: 2px solid DodgerBlue;
+    padding: 6px 6px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid DodgerBlue;
+    background-color:white;
+    color: DodgerBlue;
 `
     
 export default class Filter extends React.Component {
@@ -35,8 +42,8 @@ export default class Filter extends React.Component {
                 <Border>
                     <Title>Filtros de produtos</Title>
                     <DivLabel>
-                        Valor Minimo
                         <InputContainer 
+                            placeholder="Valor Mínimo"
                             type="number" 
                             min="0"
                             value={this.props.minFilter}
@@ -45,8 +52,8 @@ export default class Filter extends React.Component {
                             </InputContainer>
                     </DivLabel>
                     <DivLabel>
-                        Valor Máximo
-                        <InputContainer 
+                        <InputContainer
+                            placeholder="Valor Máximo"
                             type="number"
                             min="0"
                             value={this.props.maxFilter}
@@ -54,12 +61,12 @@ export default class Filter extends React.Component {
                             ></InputContainer>
                     </DivLabel>
                     <DivLabel>
-                        Buscar por Nome
-                        <InputContainer 
-                             type="text"
-                             value={this.props.nameFilter}
-                             onChange={this.props.onChangeTitleFilter}                                               
-                             ></InputContainer>
+                        <InputContainer
+                            placeholder="Buscar pelo nome" 
+                            type="text"
+                            value={this.props.nameFilter}
+                            onChange={this.props.onChangeTitleFilter}                                               
+                            ></InputContainer>
                     </DivLabel>                                        
                 </Border>                
             </div>
