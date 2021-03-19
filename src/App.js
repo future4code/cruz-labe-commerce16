@@ -15,49 +15,49 @@ const AppContainer = styled.div`
 const products = [
   {
     id: 1,
-    title: 'Produto 1',
+    title: 'Produto1',
     cost: 123,
-    image: 'https://picsum.photos/200/200?a=1'
+    image: 'https://picsum.photos/200/200?a=2'
   },
   {
     id: 2,
-    title: 'Produto 2',
+    title: 'Produto2',
     cost: 200,
     image: 'https://picsum.photos/200/200?a=2'
   },
   {
     id: 3,
-    title: 'Produto 3',
+    title: 'Produto3',
     cost: 250,
     image: 'https://picsum.photos/200/200?a=3'
   },
   {
     id: 4,
-    title: 'Produto 4',
+    title: 'Produto4',
     cost: 400,
     image: 'https://picsum.photos/200/200?a=4'
   },
   {
     id: 5,
-    title: 'Produto 5',
+    title: 'Produto5',
     cost: 300,
     image: 'https://picsum.photos/200/200?a=5'
   },
   {
     id: 6,
-    title: 'Produto 6',
+    title: 'Produto6',
     cost: 350,
     image: 'https://picsum.photos/200/200?a=6'
   },
   {
     id: 7,
-    title: 'Produto 7',
+    title: 'Produto7',
     cost: 450,
     image: 'https://picsum.photos/200/200?a=7'
   },
   {
     id: 8,
-    title: 'Produto 8',
+    title: 'Produto8',
     cost: 500,
     image: 'https://picsum.photos/200/200?a=8'
   }
@@ -68,18 +68,18 @@ export default class App extends React.Component {
   state = {
     minFilter: 100,
     maxFilter: 1000,
-    titleFilter: 'Produto',
+    nameFilter: 'Produto',
     productsInCart: [
       {
         id: 1,
-        title: 'Produto 1',
+        title: 'Produto1',
         cost: 123,
         image: 'https://picsum.photos/200/200?a=1',
         quantity: 0
       },
       {
         id: 2,
-        title: 'Produto 2',
+        title: 'Produto2',
         cost: 200,
         image: 'https://picsum.photos/200/200?a=2',
         quantity: 0
@@ -97,7 +97,7 @@ export default class App extends React.Component {
   }
 
   onChangeTitleFilter = (event) => {
-    this.setState({titleFilter: event.target.value})
+    this.setState({nameFilter: event.target.value})
   }
 
   onAddProductTCart = (productId) => {
@@ -138,8 +138,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppContainer>
-        <Filter />
+      <AppContainer>        
+        <Filter 
+         maxFilter = {this.state.maxFilter}
+         minFilter = {this.state.minFilter}
+         nameFilter = {this.state.nameFilter}
+         onChangeMaxFilter = {this.onChangeMaxFilter}
+         onChangeMinFilter = {this.onChangeMinFilter}
+         onChangeTitleFilter = {this.onChangeTitleFilter}      
+        />
         <Home    
           products={products}
           minFilter={this.state.minFilter}
