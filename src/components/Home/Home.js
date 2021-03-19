@@ -65,7 +65,6 @@ export class Home extends React.Component {
         const filteredAndOrderedList = this.getFilteredAndOrderedList()
         return( 
             <div>
-                
                 <HomeContainer>
                     <ProductQuantity>Quantidade de produtos: {filteredAndOrderedList.length}</ProductQuantity>
                     <InputContainer>    
