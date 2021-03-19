@@ -162,7 +162,9 @@ export default class App extends React.Component {
           maxFilter={this.state.maxFilter}
           nameFilter={this.state.nameFilter}
           onAddProductToCart={this.onAddProductToCart}/>
-        <Carrinho products={products}/>
+        <Carrinho 
+        products={this.state.productsInCart}
+        onRemoveProductFromCart ={this.onRemoveProductFromCart} />
       </AppContainer>
     );
   }
