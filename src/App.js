@@ -140,7 +140,6 @@ export default class App extends React.Component {
   render() {
     return (
       <AppContainer>
-        <EstiloGlobalBacaninha />        
         <Filter 
          maxFilter = {this.state.maxFilter}
          minFilter = {this.state.minFilter}
