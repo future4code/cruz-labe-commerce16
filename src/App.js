@@ -12,6 +12,15 @@ import imagem5 from './imagem/5.png';
 import imagem6 from './imagem/6.png';
 import imagem7 from './imagem/7.png';
 import imagem8 from './imagem/8.png';
+// import imagem9 from './imagem/fundoUniverso.jpg'
+import { createGlobalStyle } from 'styled-components'
+
+const EstiloGlobalBacaninha = createGlobalStyle`
+  body {
+  background: url('./imagem/fundoUniverso.jpg');
+}
+`
+
 
 const AppContainer = styled.div`
   display: grid;
@@ -22,49 +31,49 @@ const AppContainer = styled.div`
 const products = [
   {
     id: 1,
-    title: 'Produto1',
+    title: 'Saturno',
     cost: 123,
     image: imagem1,
   },
   {
     id: 2,
-    title: 'Produto2',
+    title: 'Plutão',
     cost: 200,
     image: imagem2
   },
   {
     id: 3,
-    title: 'Produto3',
+    title: 'Vênus',
     cost: 250,
     image: imagem3
   },
   {
     id: 4,
-    title: 'Produto4',
+    title: 'Terra',
     cost: 400,
     image: imagem4
   },
   {
     id: 5,
-    title: 'Produto5',
+    title: 'Netuno',
     cost: 300,
     image: imagem5
   },
   {
     id: 6,
-    title: 'Produto6',
+    title: 'Júpter',
     cost: 350,
     image: imagem6
   },
   {
     id: 7,
-    title: 'Produto7',
+    title: 'Marte',
     cost: 450,
     image: imagem7
   },
   {
     id: 8,
-    title: 'Produto8',
+    title: 'Urano',
     cost: 500,
     image: imagem8
   }
@@ -76,22 +85,7 @@ export default class App extends React.Component {
     minFilter: '',
     maxFilter: '',
     nameFilter: '',
-    productsInCart: [
-      {
-        id: 1,
-        title: 'Produto1',
-        cost: 123,
-        image: 'https://picsum.photos/200/200?a=1',
-        quantity: 0
-      },
-      {
-        id: 2,
-        title: 'Produto2',
-        cost: 200,
-        image: 'https://picsum.photos/200/200?a=2',
-        quantity: 0
-      },
-    ]
+    productsInCart: []
   }
 
 
@@ -145,7 +139,8 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppContainer>        
+      <AppContainer>
+        <EstiloGlobalBacaninha />        
         <Filter 
          maxFilter = {this.state.maxFilter}
          minFilter = {this.state.minFilter}
