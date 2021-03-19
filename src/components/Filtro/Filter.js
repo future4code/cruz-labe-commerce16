@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-
 const Border = styled.div`
     border: 1px solid DodgerBlue;
     display:flex;
@@ -28,7 +27,7 @@ const InputContainer = styled.input`
     border-radius: 10px;
     border: 2px solid DodgerBlue;
 `
-
+    
 export default class Filter extends React.Component {
     render() {
         return (
@@ -37,17 +36,32 @@ export default class Filter extends React.Component {
                     <Title>Filtros de produtos</Title>
                     <DivLabel>
                         Valor Minimo
-                        <InputContainer type="number" value={this.valueMin}></InputContainer>
+                        <InputContainer 
+                            type="number" 
+                            min="0"
+                            value={this.props.minFilter}
+                            onChange={this.props.onChangeMinFilter}
+                            >                                
+                            </InputContainer>
                     </DivLabel>
                     <DivLabel>
                         Valor Máximo
-                        <InputContainer type="number" value={this.va}></InputContainer>
+                        <InputContainer 
+                            type="number"
+                            min="0"
+                            value={this.props.maxFilter}
+                            onChange={this.props.onChangeMaxFilter}                            
+                            ></InputContainer>
                     </DivLabel>
                     <DivLabel>
                         Buscar por Nome
-                        <InputContainer type="text" value=""></InputContainer>
-                    </DivLabel>
-                </Border>
+                        <InputContainer 
+                             type="text"
+                             value={this.props.nameFilter}
+                             onChange={this.props.onChangeTitleFilter}                                               
+                             ></InputContainer>
+                    </DivLabel>                                        
+                </Border>                
             </div>
         );
     }
