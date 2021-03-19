@@ -41,25 +41,25 @@ const products = [
     id: 5,
     title: 'Produto 5',
     cost: 300,
-    image: 'https://picsum.photos/200/200?a=4'
+    image: 'https://picsum.photos/200/200?a=5'
   },
   {
     id: 6,
     title: 'Produto 6',
     cost: 350,
-    image: 'https://picsum.photos/200/200?a=4'
+    image: 'https://picsum.photos/200/200?a=6'
   },
   {
     id: 7,
     title: 'Produto 7',
     cost: 450,
-    image: 'https://picsum.photos/200/200?a=4'
+    image: 'https://picsum.photos/200/200?a=7'
   },
   {
     id: 8,
     title: 'Produto 8',
     cost: 500,
-    image: 'https://picsum.photos/200/200?a=4'
+    image: 'https://picsum.photos/200/200?a=8'
   }
 ]
 
@@ -135,7 +135,6 @@ export default class App extends React.Component {
 
     this.setState({productsInCart: newProductsInCart})
   }
-
 
   render() {
     return (
