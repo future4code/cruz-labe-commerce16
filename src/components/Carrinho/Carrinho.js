@@ -44,6 +44,8 @@ const Remove = styled.button `
     margin-top:2.5vh;
     font-size: 1.0em;
     color:white;
+    border:none;
+    padding: 5px 10px;
 `
 const TotalValue = styled.div `
     margin-top: 5vh;

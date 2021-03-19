@@ -62,7 +62,7 @@ export default class Filter extends React.Component {
                     </DivLabel>
                     <DivLabel>
                         <InputContainer
-                            placeholder="Buscar pelo nome" 
+                            placeholder="Buscar Viagens" 
                             type="text"
                             value={this.props.nameFilter}
                             onChange={this.props.onChangeTitleFilter}                                               
