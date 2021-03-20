@@ -8,3 +8,29 @@
 
 #### Em construção
 Para melhor experiência, acesse nosso site no computador pois estamos trabalhando para deixá-lo adaptado aos seu outros dispositivos :smiley:
+
+________________________________________________________________________________________________________________________________________________________________________
+
+#### Para você Dev :computer:
+
+##### Objetivos do Projeto
+
+Criar uma loja virtual usando os recursos de React aprendido em aula. No projeto, deve conter as seguintes funcionalidades: 
+- Home
+    - Mostrando todos os produtos
+    - Produtos:
+    - Devem ter um botão que permita adicioná-los ao carrinho
+    - Devem exibir o nome, preço e imagem em um card
+- Carrinho
+    - Mostrar todos os produtos e quantidades adicionadas
+    - Capacidade de remover itens do carrinho
+    - Mostrar o valor total do carrinho
+- Filtro
+    - Por valor mínimo e máximo
+    - Por nome do produto
+
+##### Primeiros passos
+
+1. Clone o repositório;
+2. Dê um  yarn install / npm install;
+3. Acesse o nosso código
