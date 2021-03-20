@@ -1,7 +1,7 @@
 ![Howard turns 13](https://user-images.githubusercontent.com/52434685/111887665-57335580-89b5-11eb-8143-f3c3fecbb9ec.png)
 
 
-#### Primeiros passos
+## Primeiros passos
 1. Acesse nosso site em:                   ;
 2. Escolha a viagem espacial que você deseja! Você pode selecionar por: filtrode valor máximo e minímo e preços crescente ou decrescente;
 3. Reserve seu assento no foguete,adicionando a viagem ao planeta desejado no carrinho. :rocket:
@@ -11,9 +11,9 @@ Para melhor experiência, acesse nosso site no computador pois estamos trabalhan
 
 ________________________________________________________________________________________________________________________________________________________________________
 
-#### Para você Dev :computer:
+## Para você Dev :computer:
 
-##### Objetivos do Projeto
+#### Objetivos do Projeto
 
 Criar uma loja virtual usando os recursos de React aprendido em aula. No projeto, deve conter as seguintes funcionalidades: 
 - Home
@@ -29,7 +29,7 @@ Criar uma loja virtual usando os recursos de React aprendido em aula. No projeto
     - Por valor mínimo e máximo
     - Por nome do produto
 
-##### Primeiros passos
+#### Primeiros passos
 
 1. Clone o repositório;
 2. Dê um  yarn install / npm install;
