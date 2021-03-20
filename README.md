@@ -7,4 +7,4 @@
 3. Reserve seu assento no foguete,adicionando a viagem ao planeta desejado no carrinho.
 
 #### Em construção
-Para melhor experiência, acesse nosso site no computador pois estamos trabalhando para deixá-lo adaptado aos seu outros dispositivos :happy:
+Para melhor experiência, acesse nosso site no computador pois estamos trabalhando para deixá-lo adaptado aos seu outros dispositivos :smiley:
