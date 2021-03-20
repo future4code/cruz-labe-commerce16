@@ -4,7 +4,7 @@
 #### Primeiros passos
 1. Acesse nosso site em:                   ;
 2. Escolha a viagem espacial que você deseja! Você pode selecionar por: filtrode valor máximo e minímo e preços crescente ou decrescente;
-3. Reserve seu assento no foguete,adicionando a viagem ao planeta desejado no carrinho.
+3. Reserve seu assento no foguete,adicionando a viagem ao planeta desejado no carrinho. :rocket:
 
 #### Em construção
 Para melhor experiência, acesse nosso site no computador pois estamos trabalhando para deixá-lo adaptado aos seu outros dispositivos :smiley:
