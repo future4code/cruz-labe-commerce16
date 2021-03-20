@@ -57,16 +57,15 @@ export default class Carrinho extends React.Component {
                 <TituloCarrinho>Carrinho</TituloCarrinho>
                 {
                 // Colocar a props para e o map para chamar um item por item e receber a props do app.js
-                this.props.products.map(produto => (
-                <Product>
-                    <Quantity>{produto.quantity}</Quantity>
-                    <ProductName>{produto.title}</ProductName>
-                    <Remove onClick={()=>this.props.onRemoveProductFromCart(produto.id)}>X</Remove>
-                </Product>
+                    this.props.products.map(item => (
+                        <Product>
+                            <Quantity>{item.quantity}</Quantity>
+                            <ProductName>{item.title}</ProductName>
+                            <Remove onClick={()=>this.props.onRemoveProductFromCart(item.id)}>X</Remove>
+                        </Product>
                 ))
-            }
+                }
                 <TotalValue>R$ {this.props.totalValue} </TotalValue>
-               
             </Cart>
         );
     }
