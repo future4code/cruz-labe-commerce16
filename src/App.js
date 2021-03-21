@@ -3,7 +3,7 @@ import './App.css';
 import styled from 'styled-components';
 import {Home} from './components/Home/Home';
 import Filter from './components/Filtro/Filter';
-import Carrinho from './components/Carrinho/Carrinho';
+import Carrinho from './components/Carrinho/Carrinho'
 import imagem1 from './imagem/planetOne.png';
 import imagem2 from './imagem/2.png';
 import imagem3 from './imagem/3.png';
@@ -12,6 +12,7 @@ import imagem5 from './imagem/5.png';
 import imagem6 from './imagem/6.png';
 import imagem7 from './imagem/7.png';
 import imagem8 from './imagem/8.png';
+
 
 const AppContainer = styled.div`
   display: grid;
@@ -71,10 +72,8 @@ const products = [
 ]
 
 export default class App extends React.Component {
-
   state = {
     quantity:0,
-    totalValue:0,
     minFilter: '',
     maxFilter: '',
     nameFilter: '',
@@ -149,12 +148,12 @@ export default class App extends React.Component {
     return (
       <AppContainer>        
         <Filter 
-         maxFilter = {this.state.maxFilter}
-         minFilter = {this.state.minFilter}
-         nameFilter = {this.state.nameFilter}
-         onChangeMaxFilter = {this.onChangeMaxFilter}
-         onChangeMinFilter = {this.onChangeMinFilter}
-         onChangeTitleFilter = {this.onChangeTitleFilter}      
+        maxFilter = {this.state.maxFilter}
+        minFilter = {this.state.minFilter}
+        nameFilter = {this.state.nameFilter}
+        onChangeMaxFilter = {this.onChangeMaxFilter}
+        onChangeMinFilter = {this.onChangeMinFilter}
+        onChangeTitleFilter = {this.onChangeTitleFilter}      
         />
         <Home    
           products={products}
@@ -163,8 +162,9 @@ export default class App extends React.Component {
           nameFilter={this.state.nameFilter}
           onAddProductToCart={this.onAddProductToCart}/>
         <Carrinho 
-        products={this.state.productsInCart}
-        onRemoveProductFromCart ={this.onRemoveProductFromCart} />
+          products={this.state.productsInCart}
+          onRemoveProductFromCart ={this.onRemoveProductFromCart}
+        /> 
       </AppContainer>
     );
   }

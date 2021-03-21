@@ -8,7 +8,7 @@ const Cart = styled.div `
     padding-top: 2vh;
     align-items: center;
     justify-content: flex-start;
-    height: 63.7vh;
+    height:100vh;
     flex-direction: column;
     border-radius: 10px;
     color: dodgerblue;
@@ -35,22 +35,33 @@ const ProductName = styled.p `
 `
 const Remove = styled.button `
     height:30px;
-    margin-top:2.5vh;
-    border-radius:6px;
-    background-color: DodgerBlue;
-    font-weight: 450;
-    line-height: 1.3;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-top:2.5vh;
-    font-size: 1.0em;
-    color:white;
+    width:30px;
+    border-color:dodgerblue;
+    margin-top:2.25vh;
+    border-radius:4px;
+    background-color: white;
+    padding-bottom:10px;
+    font-size: 1.5em;
+    text-align:center;
+    font-weight:bolder;
+    color:red;
+    align-items:center;
+    justify-content:center;
 `
 const TotalValue = styled.div `
     margin-top: 5vh;
     color: dodgerblue;
+    font-weight:bolder;
 `
 
 export default class Carrinho extends React.Component {
+    getTotalValue = () => {
+        let totalValue = 0
+        for(let product of this.props.products) {
+          totalValue += product.cost * product.quantity    
+        }
+        return totalValue
+    }
     render() {
         return (
             <Cart>
@@ -61,11 +72,11 @@ export default class Carrinho extends React.Component {
                         <Product>
                             <Quantity>{item.quantity}</Quantity>
                             <ProductName>{item.title}</ProductName>
-                            <Remove onClick={()=>this.props.onRemoveProductFromCart(item.id)}>X</Remove>
+                            <Remove onClick={()=>this.props.onRemoveProductFromCart(item.id)}> - </Remove>
                         </Product>
                 ))
                 }
-                <TotalValue>R$ {this.props.totalValue} </TotalValue>
+                <TotalValue>Valor total: R${this.getTotalValue()}</TotalValue>
             </Cart>
         );
     }
