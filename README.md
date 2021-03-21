@@ -2,7 +2,7 @@
 
 
 ## Primeiros passos
-1. Acesse nosso site em:                   ;
+1. Acesse nosso site em: http://nine-stretch.surge.sh/                ;
 2. Escolha a viagem espacial que você deseja! Você pode selecionar por: filtrode valor máximo e minímo e preços crescente ou decrescente;
 3. Reserve seu assento no foguete,adicionando a viagem ao planeta desejado no carrinho. :rocket:
 
