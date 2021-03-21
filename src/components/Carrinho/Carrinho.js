@@ -47,6 +47,7 @@ const Remove = styled.button `
     color:red;
     align-items:center;
     justify-content:center;
+
 `
 const TotalValue = styled.div `
     margin-top: 5vh;
