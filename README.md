@@ -24,7 +24,7 @@ Criar uma loja virtual usando os recursos de React aprendido em aula. No projeto
 - Carrinho
   - :heavy_check_mark: Mostrar todos os produtos e quantidades adicionadas
   - :heavy_check_mark: Capacidade de remover itens do carrinho
-  - :x: Mostrar o valor total do carrinho
+  - :heavy_check_mark: Mostrar o valor total do carrinho
 - Filtro
   - :heavy_check_mark: Por valor mínimo e máximo
   - :heavy_check_mark:Por nome do produto
